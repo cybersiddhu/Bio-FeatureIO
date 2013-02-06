@@ -3,7 +3,7 @@ perl:
  - '5.12'
  - '5.14'
  - '5.16'
-script: "perl Build.PL --accept && ./Build test"
+script: "perl Build.PL --accept --network && ./Build test"
 before_script:
  - "cpanm -n Config::Any Graph::Directed"
 before_install:
