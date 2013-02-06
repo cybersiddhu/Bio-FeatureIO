@@ -1,0 +1,8 @@
+language: perl
+perl:
+ - "5.10"
+script: "dzil test"
+install: "dzil listdeps --author | cpanm"
+before_install:
+ - "cpanm Dist::Zilla"
+ - "sudo apt-get update"
