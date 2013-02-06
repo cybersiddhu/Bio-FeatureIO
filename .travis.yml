@@ -1,10 +1,7 @@
 language: perl
 perl:
  - '5.12'
-script: "dzil test --release"
-install: "dzil listdeps | cpanm -n"
-before_install:
- - "cpanm -n Dist::Zilla"
- - "dzil authordeps | cpanm -n"
+script: "perl Build.PL --accept && ./Build test"
+before_installl:
  - "sudo apt-get update"
  - "sudo apt-get install libdb-dev"
