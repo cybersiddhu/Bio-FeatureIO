@@ -1,9 +1,10 @@
 language: perl
 perl:
  - '5.12'
+ - '5.14'
+ - '5.16'
 script: "perl Build.PL --accept && ./Build test"
 before_script:
  - "cpanm -n Config::Any Graph::Directed"
 before_install:
- - "sudo apt-get update 2>&1 | tail -n 4"
  - "sudo apt-get install libdb-dev graphviz libgd2-xpm-dev libxml2-dev 2>&1 | tail -n 4"
