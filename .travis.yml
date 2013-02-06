@@ -1,6 +1,6 @@
 language: perl
 perl:
- - "5.10"
+ - "perl-5.10.1"
 script: "dzil test --release"
 install: "dzil listdeps --author | cpanm"
 before_install:
