@@ -1,7 +1,7 @@
 language: perl
 perl:
  - "5.10"
-script: "dzil test"
+script: "dzil test --release"
 install: "dzil listdeps --author | cpanm"
 before_install:
  - "cpanm Dist::Zilla"
