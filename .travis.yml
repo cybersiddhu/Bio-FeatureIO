@@ -2,6 +2,6 @@ language: perl
 perl:
  - '5.12'
 script: "perl Build.PL --accept && ./Build test"
-before_installl:
+before_install:
  - "sudo apt-get update"
  - "sudo apt-get install libdb-dev"
